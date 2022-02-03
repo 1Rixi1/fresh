@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %open-sans-400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #505050;
+  font-style: normal;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column
+}
+
+.main {
+  flex-grow: 1
+}
+
+a {
+  @extend %open-sans-400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #121212;
+  @extend %ruda-600;
+}

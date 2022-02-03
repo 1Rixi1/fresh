@@ -1,0 +1,50 @@
+$default: #505050;
+$green-200: #e0edcf;
+$bg-red: #cf3e3b;
+$bg: #f6f6f6;
+$bg-accent: #63a60f;
+$primary-bg: #31352b;
+$yellow-900: #ffb800;
+
+
+%open-sans-400 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%open-sans-600 {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%open-sans-700 {
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%ruda-400 {
+  font-family: 'Ruda-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%ruda-600 {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%ruda-900 {
+  font-family: 'Ruda-Black', sans-serif;
+  font-weight: 900;
+}
+
+%button {
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: $bg-accent;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+}
+

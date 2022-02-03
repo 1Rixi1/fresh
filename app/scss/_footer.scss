@@ -1,0 +1,150 @@
+.footer {
+  background-color: $primary-bg;
+
+  &__top {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    padding: 30px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 311px;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  &__text {
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  &__form-item {
+    display: flex;
+  }
+
+  &__email {
+    max-width: 180px;
+    width: 100%;
+    border-radius: 6px 0px 0px 6px;
+    padding: 12px;
+    border: none;
+    line-height: 1;
+
+    &::placeholder {
+      color: #4f4f4f;
+    }
+  }
+
+  &__submit {
+    @extend %button;
+    @extend %open-sans-700;
+    border-radius: 0px 6px 6px 0px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+
+  &__box {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    width: 130px;
+  }
+
+  &__list:not(:last-child) {
+    margin-right: 74px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  &__info {
+    max-width: 218px;
+    width: 100%;
+    color: #ffffff
+  }
+
+  &__info-list {
+    margin-bottom: 13px;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-link {
+    outline: transparent;
+    padding: 20px 1px 0px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    transition: fill 0.3s ease;
+  }
+
+
+  &__bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  &__copy {
+    color: #ffffff;
+  }
+
+  &__card {
+    display: flex;
+  }
+
+  &__card-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__card--visa {
+    width: 93px;
+    height: 29px;
+  }
+
+  &__card--mc {
+    width: 49px;
+    height: 29px;
+  }
+
+
+  &__icon:hover {
+    fill: #A5A5A5;
+  }
+
+  &__social-link:focus {
+    box-shadow: inset 0 0 0 3px #eff6e7;
+    border-radius: 3px;
+    padding: 20px 1px 0px;
+  }
+
+  &__icon:active {
+    fill: $green-200;
+  }
+  
+}
