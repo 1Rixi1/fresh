@@ -1,18 +1,10 @@
-@import 'reset';
-@import 'vars';
-@import 'fonts';
-@import 'global';
-@import 'libs';
-@import 'header';
-@import 'main';
-@import 'footer';
+@import 'basis/reset';
+@import 'basis/vars';
+@import 'basis/fonts';
+@import 'basis/global';
+@import 'basis/libs';
+@import 'page/header';
+@import 'page/footer';
+@import 'main/main';
 
 
-
-
-
-
-
-
-
-@import 'media';

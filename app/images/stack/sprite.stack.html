@@ -17,12 +17,15 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
+	.svg-close-icon-dims { width: 24px; height: 24px; }
 	.svg-heart-dims { width: 32px; height: 29px; }
 	.svg-icon-cart-dims { width: 32px; height: 31px; }
 	.svg-icon-delivery-dims { width: 32px; height: 23px; }
 	.svg-icon-heart-dims { width: 32px; height: 29px; }
 	.svg-icon-mc-dims { width: 49px; height: 29px; }
 	.svg-icon-menu-btn-dims { width: 8px; height: 4px; }
+	.svg-icon-minus-dims { width: 16px; height: 16px; }
+	.svg-icon-plus-dims { width: 16px; height: 16px; }
 	.svg-icon-search-dims { width: 21px; height: 20px; }
 	.svg-icon-tel-dims { width: 23px; height: 23px; }
 	.svg-icon-user-dims { width: 25px; height: 32px; }
@@ -30,6 +33,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-info-icon--hours-dims { width: 50px; height: 50px; }
 	.svg-info-icon--return-box-dims { width: 50px; height: 50px; }
 	.svg-info-icon--scooter-dims { width: 50px; height: 50px; }
+	.svg-remove-btn-dims { width: 12px; height: 12px; }
 	.svg-social-icon--facebook-dims { width: 33px; height: 32px; }
 	.svg-social-icon--instagram-dims { width: 33px; height: 32px; }
 	.svg-social-icon--telegram-dims { width: 33px; height: 32px; }
@@ -64,6 +68,15 @@ selector is used to show the very shape that is referenced by the fragment ident
 
 			<ul>
 
+				<li title="close-icon">
+					<div class="icon-box">
+
+						<!-- close-icon -->
+						<img src="sprite.svg#close-icon" class="svg-close-icon-dims" alt="close-icon"/>
+
+					</div>
+					<h2>close-icon</h2>
+				</li>
 				<li title="heart">
 					<div class="icon-box">
 
@@ -117,6 +130,24 @@ selector is used to show the very shape that is referenced by the fragment ident
 
 					</div>
 					<h2>icon-menu-btn</h2>
+				</li>
+				<li title="icon-minus">
+					<div class="icon-box">
+
+						<!-- icon-minus -->
+						<img src="sprite.svg#icon-minus" class="svg-icon-minus-dims" alt="icon-minus"/>
+
+					</div>
+					<h2>icon-minus</h2>
+				</li>
+				<li title="icon-plus">
+					<div class="icon-box">
+
+						<!-- icon-plus -->
+						<img src="sprite.svg#icon-plus" class="svg-icon-plus-dims" alt="icon-plus"/>
+
+					</div>
+					<h2>icon-plus</h2>
 				</li>
 				<li title="icon-search">
 					<div class="icon-box">
@@ -181,6 +212,15 @@ selector is used to show the very shape that is referenced by the fragment ident
 					</div>
 					<h2>info-icon--scooter</h2>
 				</li>
+				<li title="remove-btn">
+					<div class="icon-box">
+
+						<!-- remove-btn -->
+						<img src="sprite.svg#remove-btn" class="svg-remove-btn-dims" alt="remove-btn"/>
+
+					</div>
+					<h2>remove-btn</h2>
+				</li>
 				<li title="social-icon--facebook">
 					<div class="icon-box">
 
@@ -225,7 +265,7 @@ selector is used to show the very shape that is referenced by the fragment ident
 
 		</section>
 		<footer>
-			<p>Generated at Thu, 03 Feb 2022 09:37:24 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Thu, 10 Feb 2022 13:55:09 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

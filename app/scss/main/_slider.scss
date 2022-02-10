@@ -1,0 +1,109 @@
+.slider {
+  height: 600px;
+
+  &__title {
+    @extend %ruda-900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    max-width: 780px;
+
+    span {
+      color: $bg-red;
+      display: block;
+    }
+  }
+
+  &__text {
+    margin-bottom: 46px;
+    font-size: 16px;
+    transform: translateY(-6px);
+  }
+
+  &__btn {
+    @extend %button;
+    // transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    // не работает transition на Swiper
+  }
+
+
+  &__content {
+    min-height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__box {
+    transform: translateY(10em);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 30px 24px;
+    width: 1240px;
+    max-width: 100%;
+  }
+
+  &__nav {
+    top: 49%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+    outline: transparent;
+    transition: background-color 0.3s ease;
+
+    &::after {
+      font-size: 35px;
+      color: $default;
+      transition: color 0.3s ease;
+    }
+  }
+
+  &__prev {
+    left: 60px;
+  }
+
+  &__next {
+    right: 60px;
+  }
+
+  .swiper-button-disabled {
+    &::after {
+      opacity: 0.8;
+    }
+  }
+
+  &__nav:hover {
+    background-color: #E0EDCF;
+
+    &::after {
+      color: $bg-accent;
+    }
+  }
+
+  &__btn:hover {
+    background-color: #4D810C;
+  }
+
+  &__nav:focus {
+    box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+    border-radius: 6px;
+  }
+
+  &__btn:focus {
+    box-shadow: 0px 0px 0px 4px #E0EDCF;
+    border-radius: 6px;
+  }
+
+  &__nav:active {
+    background-color: #F3F3F2;
+    color: $bg-accent;
+  }
+
+  &__btn:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+}

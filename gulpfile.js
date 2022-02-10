@@ -4,7 +4,6 @@ const {
   watch,
   parallel,
   series,
-  swiper
 } = require('gulp');
 
 const scss = require('gulp-sass')(require('sass'));
@@ -14,20 +13,25 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const ssi = require('browsersync-ssi');
+const buildssi = require('gulp-ssi');
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
-// const fileinclude = require('gulp-file-include');
+const htmlInclude = require('gulp-file-include');
+const fonter = require('gulp-fonter');
+const ttf2woff2 = require('gulp-ttf2woff2');
 
 
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'app/'
+      baseDir: 'app/',
+      middleware: ssi({ baseDir: 'app/', ext: '.html' }),
     },
+    // tunnel: 'yousitename',
     notify: false,
   });
 }
-
 
 function styles() {
   return src('app/scss/style.scss')
@@ -39,6 +43,7 @@ function styles() {
       overrideBrowserslist: ['last 10 versions'],
       grid: true,
     }))
+    .pipe(dest('dist/css'))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream());
 }
@@ -48,11 +53,14 @@ function scripts() {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/swiper/swiper-bundle.js',
       'node_modules/mixitup/dist/mixitup.js',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
       'node_modules/fslightbox/index.js',
+      'node_modules/rateyo/src/jquery.rateyo.js',
       'app/js/main.js',
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
+    .pipe(dest('dist/js'))
     .pipe(dest('app/js'))
     .pipe(browserSync.stream());
 }
@@ -83,7 +91,6 @@ function images() {
     .pipe(dest('dist/images'));
 }
 
-
 function svgSprites() {
   return src('app/images/icons/**/**.svg')
 
@@ -109,33 +116,54 @@ function svgSprites() {
 
 }
 
+function includes() {
+  return src(['app/components/**/*.html'])
+    .pipe(htmlInclude({
+      prefix: '@',
+      basepath: '@file'
+    }))
+    .pipe(dest('app'))
+  .pipe(browserSync.stream());
+}
 
-// function fileIncludes() {
-//   return src(['app/index.html'])
-//     .pipe(fileinclude({
-//       prefix: '@',
-//       basepath: '@file'
-//     }))
-//   .pipe(dest('app/assembly/**/*.html'))
-//   .pipe(browserSync.stream());
-//   }
+function otfToTtf() {
+  return src('app/fonts/*.otf')
+  .pipe(fonter({
+    formats: ['ttf']
+  }))
+  .pipe(dest('app/fonts'))
+}
 
-
+function ttfToWoff() {
+  return src('app/fonts/*.ttf')
+  .pipe(fonter({
+    formats: ['woff']
+  }))
+  .pipe(dest('app/fonts'))
+  .pipe(src('app/fonts/*.ttf'))
+  .pipe(ttf2woff2())
+  .pipe(dest('app/fonts'));
+}
 
 function cleanDist() {
   return del('dist');
 }
 
-
 function build() {
   return src([
-      'app/**/*.html',
       'app/css/style.min.css',
-      'app/js/main.min.js'
+      'app/js/main.min.js',
+      'app/fonts/*'
     ], {
       base: 'app'
     })
     .pipe(dest('dist'));
+}
+
+function buildhtml() {
+  return src(['app/**/*.html', '!app/parts/**/*'])
+  .pipe(buildssi({ root: 'app/' }))
+  .pipe(dest('dist'));
 }
 
 function watching() {
@@ -143,7 +171,7 @@ function watching() {
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/**/**.svg'], svgSprites);
-  // watch(['app/assembly/**/*.html'], fileIncludes);
+  watch(['app/components/**/*.html'], includes);
 }
 
 exports.styles = styles;
@@ -153,8 +181,14 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.svgSprites = svgSprites;
-// exports.fileIncludes = fileIncludes;
+exports.includes = includes;
+exports.buildhtml = buildhtml;
+exports.otfToTtf = otfToTtf;
+exports.ttfToWoff = ttfToWoff;
 
-exports.build = series(cleanDist, images, build);
+exports.fonts = parallel(otfToTtf, ttfToWoff);
 
-exports.default = parallel(styles, scripts, svgSprites, browsersync, watching); // <--  fileIncludes
+exports.build = series(cleanDist, parallel(otfToTtf, ttfToWoff), images, build, buildhtml);
+
+
+exports.default = parallel(includes, styles, scripts, svgSprites, browsersync, watching);  

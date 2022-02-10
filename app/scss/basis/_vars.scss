@@ -5,6 +5,9 @@ $bg: #f6f6f6;
 $bg-accent: #63a60f;
 $primary-bg: #31352b;
 $yellow-900: #ffb800;
+$dark-900: #121212;
+$silver-600: #c1c1c1;
+$green-100: #eff6e7;
 
 
 %open-sans-400 {
@@ -46,5 +49,12 @@ $yellow-900: #ffb800;
   padding: 12px 24px;
   border-radius: 6px;
   border: none;
+  @extend %open-sans-400;
 }
 
+%clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
