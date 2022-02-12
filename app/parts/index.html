@@ -24,24 +24,20 @@
 <body>
 
 
-
-	<!--#include virtual="parts/page/header.html" -->
+	@include('page/header.html')
 
 	<main class="main">
 
-
-		<!--#include virtual="parts/main/slider.html" -->
-		<!--#include virtual="parts/main/info.html" -->
-		<!--#include virtual="parts/main/category.html" -->
-		<!--#include virtual="parts/main/stock.html" -->
-		<!--#include virtual="parts/main/partners.html" -->
-		<!--#include virtual="parts/main/news.html" -->
+		@include('main/slider.html')
+		@include('main/info.html')
+		@include('main/category.html')
+		@include('main/stock.html')
+		@include('main/partners.html')
+		@include('main/news.html')
 
 	</main>
 
-	<!--#include virtual="parts/page/footer.html" -->
-
-
+	@include('page/footer.html')
 
 	<script defer src="js/main.min.js"></script>
 </body>
