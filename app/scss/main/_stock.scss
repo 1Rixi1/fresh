@@ -1,12 +1,17 @@
 .stock {
   background-color: $bg;
   text-align: center;
-
+  margin-bottom: 16px;
 
   &__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 52px;
+    margin: 0 auto 52px;
+    @media(max-width: 992px){
+      margin: 0 auto 25px;
+    }
   }
 
   &__item {
@@ -26,6 +31,9 @@
     outline: transparent;
     transition: color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
     text-transform: uppercase;
+    @media(max-width: 992px){
+      font-size: 14px;
+    }
   }
 
 
@@ -57,9 +65,23 @@
   margin-bottom: 58px;
   text-align: left;
 
-  &__item {
-    display: flex;
-    padding: 12px;
+  @media(max-width: 1366px){
+   grid-template: minmax(124px, auto) / repeat(3, minmax(200px, 1fr)); 
+  }
+  @media(max-width: 992px){
+   grid-template: minmax(124px, auto) / repeat(2, minmax(200px, 1fr)); 
+   column-gap: 15px;
+   row-gap: 20px;
+   padding: 0 20px;
+   margin-bottom: 36px;
+  }
+  @media(max-width: 600px){
+   grid-template: minmax(124px, auto) / repeat(1, minmax(200px, 1fr)); 
+  }
+
+  &__list-item {
+    position: relative;
+    padding: 8px 12px;
     background-color: #ffffff;
     border: 1px solid #c1c1c1;
     border-radius: 6px;
@@ -67,6 +89,10 @@
     letter-spacing: 0.03em;
     position: relative;
     transition: border 0.3s ease;
+  }
+
+  &__item {
+    display: flex;
   }
 
   &__new,
@@ -85,9 +111,16 @@
   &__img {
     margin-right: 12px;
   }
-
+  
   &__img-link {
     z-index: 2;
+    outline: transparent;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    &:focus{
+     box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+      border-radius: 6px;
+    }
   }
 
   &__item-link {
@@ -97,6 +130,15 @@
     left: 0;
     right: 0;
     z-index: 2;
+    transition: border 0.3s ease;
+     outline: transparent;
+     &:hover{
+       border: 1px solid $bg-accent;
+     }
+    &:focus{
+      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+      border-radius: 6px;
+    }
   }
 
   &__text {
@@ -104,6 +146,16 @@
     letter-spacing: 0.03em;
     color: $dark-900;
     @extend %clamp;
+    @extend %open-sans-600;
+    letter-spacing: -1px;
+    line-height: 22px;
+  }
+
+  &__items {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    z-index: 5;
   }
 
   &__box {
@@ -168,16 +220,17 @@
     z-index: 1;
   }
 
+  &__star-num{
+    position: absolute;
+    right: 20px;
+  }
+
   &__link {
     @extend %button;
     outline: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease, color 0.3s ease;
   }
 
-
-  &__item:hover {
-    border: 1px solid $bg-accent;
-  }
 
   &__link:hover {
     background-color: #4d800c;

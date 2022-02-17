@@ -31,7 +31,7 @@ window.addEventListener('click', function (even) {
 
   // Проверяем клик на + или - внутри корзины
 
-  if (event.target.hasAttribute('data-action') && event.target.closest('.basket-product__catalog') ) {
+  if (event.target.hasAttribute('data-action') && event.target.closest('.basket-product__catalog')) {
     // Пересчет общей стоимости товаров в корзине 
 
     calcCartPrice();
@@ -118,22 +118,6 @@ window.addEventListener('click', function () {
 });
 
 
-const cartProductList = document.querySelector('.basket-product');
-
-const deleteProducts = (productParent) => {
-  let id = productParent.querySelector('.basket-product__item').dataset.id;
-};
-
-cartProductList.addEventListener('click', (e) => {
-  if (e.target.classList.contains('basket-product__delete')){
-    deleteProducts(e.target.closest('.basket-product__catalog'));
-
-  }
-});
-
-
-
-
 
 
 
@@ -167,6 +151,10 @@ let swiperIMG = new Swiper('.swiper-img', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
   a11y: {
     enabled: true,
@@ -191,9 +179,56 @@ let swiperIMG = new Swiper('.swiper-img', {
     pageUpDown: true,
   },
 
+  breakpoints: {
+
+    992: {
+
+      effect: 'coverflow',
+
+      coverflowEffect: {
+        rotate: 30,
+        slideShadows: false,
+      },
+
+    }
+
+  }
+
 });
 
+let swiperPartners = new Swiper('.partners__swiper', {
 
+  loop: true,
+  speed: 800,
+  // spaceBetween: 85,
+  grabCursor: true,
+
+
+  a11y: {
+    enabled: true,
+    nextSlideMessage: 'Next slide',
+    prevSlideMessage: 'Previous slide',
+    lastSlideMessage: 'This is the last slide',
+    firstSlideMessage: 'This is the first slide',
+    paginationBulletMessage: 'Go to slide {{index}}',
+  },
+
+
+  breakpoints: {
+    // when window width is >= 320px
+    375: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 6,
+    },
+  }
+
+  
+});
 
 
 
@@ -236,6 +271,10 @@ $(".product__star").rateYo({
   readOnly: true,
 });
 
+$('.client__search').on('click', function () {
+  $('.menu-search').toggleClass('menu-search--active');
+});
+
 
 $('.menu__catalog').on('click', function () {
   $('.catalog').toggleClass('catalog--active');
@@ -249,5 +288,6 @@ $(".client__cart, .basket__icon").on('click', function () {
   $('.basket-bg').toggleClass('basket-bg--active');
   $('body').toggleClass('body--active');
 });
+
 
 

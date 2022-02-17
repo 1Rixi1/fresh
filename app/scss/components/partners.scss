@@ -1,11 +1,8 @@
-
 .partners {
-  // padding: 76px 0;
+
   &__list {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    height: 70px;
   }
 
   &__item {
@@ -16,5 +13,18 @@
   &__item:hover {
     opacity: 1;
   }
+
+  &__link {
+    max-width: 80%;
+    height: 80px;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+       margin: 0 auto;
+    }
+  }
+
+
 
 }

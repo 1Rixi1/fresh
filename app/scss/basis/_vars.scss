@@ -35,6 +35,11 @@ $green-100: #eff6e7;
   font-weight: 600;
 }
 
+%ruda-700 {
+  font-family: 'Ruda-Bold', sans-serif;
+  font-weight: 700;
+}
+
 %ruda-900 {
   font-family: 'Ruda-Black', sans-serif;
   font-weight: 900;
@@ -57,4 +62,5 @@ $green-100: #eff6e7;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+  text-overflow: ellipsis;
 }

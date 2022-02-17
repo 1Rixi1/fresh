@@ -1,5 +1,4 @@
 .slider {
-  height: 600px;
 
   &__title {
     @extend %ruda-900;
@@ -8,23 +7,45 @@
     text-transform: uppercase;
     margin-bottom: 7px;
     max-width: 780px;
+    @extend %clamp;
 
     span {
       color: $bg-red;
       display: block;
     }
+    
+    @media(max-width: 992px) {
+      font-size: 40px;
+      margin-bottom: 14px;
+      font-family: 'Ruda-Bold', sans-serif;
+      font-weight: 700;
+    }
+    
+    @media(max-width: 768px) {
+      font-size: 20px;
+    }
   }
+
 
   &__text {
     margin-bottom: 46px;
     font-size: 16px;
     transform: translateY(-6px);
+    @extend %clamp;
+
+    @media(max-width: 992px) {
+      margin-bottom: 34px;
+    }
   }
 
   &__btn {
     @extend %button;
-    // transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
-    // не работает transition на Swiper
+    transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    transition-duration: 1000ms !important;
+
+    @media(max-width: 992px) {
+      font-size: 14px;
+    }
   }
 
 
@@ -34,15 +55,30 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media(max-width: 992px) {
+      min-height: 320px;
+      
+    }
   }
 
   &__box {
-    transform: translateY(10em);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     padding: 30px 24px;
-    width: 1240px;
-    max-width: 100%;
+    max-width: 1240px;
+
+    @media(max-width: 992px) {
+      padding: 15px;
+      padding-bottom: 30px;
+      top: 52%;
+    }
+
   }
 
   &__nav {
@@ -59,6 +95,14 @@
       color: $default;
       transition: color 0.3s ease;
     }
+
+    @media(max-width: 1590px) {
+      top: 85%;
+    }
+
+    @media(max-width: 992px) {
+      display: none;
+    }
   }
 
   &__prev {
@@ -73,6 +117,30 @@
     &::after {
       opacity: 0.8;
     }
+  }
+
+  &__pagination {
+    display: none;
+
+    @media(max-width: 992px) {
+      display: block;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #ffffff;
+    border: 1px solid #c1c1c1;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $bg-accent;
+    border: 1px solid $bg-accent;
   }
 
   &__nav:hover {
