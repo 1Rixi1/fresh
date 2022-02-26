@@ -59,7 +59,6 @@ a {
 
 .title {
   font-size: 32px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #121212;
   @extend %ruda-600;
@@ -90,11 +89,15 @@ a {
   line-height: 1;
   letter-spacing: 0.03em;
   color: #ffffff;
-  padding: 3px 6px;
+  padding: 4px 6px;
   border-radius: 6px;
   display: block;
   text-transform: uppercase;
   display: none;
+
+  &--product-content{
+    padding: 9px 16px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 6px;
@@ -136,7 +139,8 @@ a {
   margin-right: 55px;
   margin-bottom: 8px;
   z-index: 10;
-  @media(max-width: 768px){
+
+  @media(max-width: 768px) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -159,7 +163,85 @@ a {
     background-image: url('../../images/icons/icon-minus.svg');
   }
 
-  // @media(max-width: 768px) {
-  //   bottom: 55px;
-  // }
+
+}
+
+
+.breadcrumbs {
+  padding: 21px 0;
+  background-color: $bg;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 21px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 10px;
+        background-image: url('../../images/icons/icon-chevron.svg');
+        top: 4px;
+        right: -12px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 1.2;
+    @extend %open-sans-400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.pagination {
+  display: flex;
+
+  &__item {
+    width: 48px;
+    height: 48px;
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &--active {
+      border: 1px solid $default;
+    }
+
+    transition: color 0.3s ease;
+    &:hover{
+      color: $bg-accent;
+    }
+
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    
+  }
+
+  &__icon {
+    width: 10px;
+    height: 18px;
+    fill: $default;
+    &--active{
+      fill: $silver-600;
+    }
+  }
 }

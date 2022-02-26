@@ -1,0 +1,1069 @@
+<section class="catalog-page">
+  <div class="container">
+    <h2 class="catalog-page__title">Каталог товаров</h2>
+    <div class="catalog-page__inner">
+
+      <div class="filters">
+        <ul class="filters__list">
+          <li class="filters__item">
+            <h3 class="filters__item-title">Категории</h3>
+            <ul class="filters__item-list">
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Овощи и фрукты
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Бакалея
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Молочные продукты
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Хлеб
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Мясо
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Колбаса
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Рыба
+                </a>
+              </li>
+              <li class="filters__item-text">
+                <a class="filters__link" href="#">
+                  Алкоголь
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="filters__item filters__sentence">
+            <h3 class="filters__item-title">Предложения</h3>
+            <ul class="filters__item-list filters__sentence-list">
+
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Со скидкой</p>
+                  </label>
+                </form>
+              </li>
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Новинка</p>
+                  </label>
+                </form>
+              </li>
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Хит</p>
+                  </label>
+                </form>
+              </li>
+            </ul>
+          </li>
+
+          <li class="filters__item filters__sentence filters__brands">
+            <h3 class="filters__item-title">Бренд</h3>
+            <ul class="filters__item-list filters__sentence-list">
+
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">CocaCola</p>
+                  </label>
+                </form>
+              </li>
+
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Pepsi</p>
+                  </label>
+                </form>
+              </li>
+
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Sprite</p>
+                  </label>
+                </form>
+              </li>
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Fanta</p>
+                  </label>
+                </form>
+              </li>
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">RedBull</p>
+                  </label>
+                </form>
+              </li>
+              <li class="filters__sentence-item">
+                <form class="filters__sentence-form">
+                  <label class="filters__sentence-label">
+                    <input class="filters__sentence-input" type="checkbox">
+                    <p class="filters__sentence-text">Dr Pepper</p>
+                  </label>
+                </form>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="filters__item filters__price">
+            <h3 class="filters__item-title">Цена</h3>
+            <form class="filters__price-form">
+
+              <ul class="filters__price-list">
+                <li class="filters__price-item">
+                  <span class="filters__price-from">от</span>
+                  <input class="filters__price-num filter__from" value="0"></input>
+                  <span class="filters__price-currency">₽</span>
+                </li>
+
+                <li class="filters__price-item">
+                  <span class="filters__price-from">от</span>
+                  <input class="filters__price-num filter__to" value="0"></input>
+                  <span class="filters__price-currency">₽</span>
+                </li>
+              </ul>
+
+              <input class="filters__price-input" name="my_range" type="text" value="" data-min="0" data-from="100"
+                data-to="1000" data-max="1500" value="" />
+
+
+            </form>
+          </li>
+        </ul>
+      </div>
+
+      <div class="catalog-page__box">
+        <div class="catalog-filter">
+
+          <form class="catalog-filter__form">
+            <select class="catalog-filter__select catalog-filter__sort-item">
+              <option class="catalog-filter__option">По названию</option>
+              <option class="catalog-filter__option">2</option>
+              <option class="catalog-filter__option">3</option>
+              <option class="catalog-filter__option">4</option>
+            </select>
+
+            <select class="catalog-filter__select catalog-filter__sort-item">
+              <option class="catalog-filter__option">по 12</option>
+              <option class="catalog-filter__option">2</option>
+              <option class="catalog-filter__option">3</option>
+              <option class="catalog-filter__option">4</option>
+            </select>
+          </form>
+          <button class="catalog-filter__btn catalog-filter__sort-item catalog-filter__btn--list">
+            <svg class="catalog-filter__icon">
+              <use xlink:href="images/stack/sprite.svg#icon-catalog-list">
+              </use>
+            </svg>
+          </button>
+
+          <button class="catalog-filter__btn catalog-filter__sort-item catalog-filter__btn--grid">
+            <svg class="catalog-filter__icon catalog-filter__icon--active">
+              <use xlink:href="images/stack/sprite.svg#icon-catalog-grid">
+              </use>
+            </svg>
+          </button>
+
+
+
+
+        </div>
+
+        <ul class="catalog-product">
+
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery1" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery2" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery3" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery4" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery5" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery6" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery7" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery8" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery9" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery10" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery11" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+          <li class="category__items-box mix category-a">
+            <article class="category__items-item " data-id="01">
+              <a class="category__item-link" href="#">
+                <span class="sr-only">Ссылка на товар</span>
+              </a>
+              <div class="category__top">
+                <ul class="category__top-box">
+                  <li class="badge badge--new badge--active">
+                    новинка
+                  </li>
+                  <li class="badge badge--discont badge--active">
+                    -50%
+                  </li>
+                  <li class="badge badge--hit">
+                    хит
+                  </li>
+                </ul>
+                <button class="category__like" type="button">
+                  <svg class="category__like-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span class="sr-only">Понравившийся товар</span>
+                </button>
+              </div>
+
+              <img class="category__img" src="images/category/9.png " alt="Ананас">
+              <a class="category__items-link" data-fslightbox="gallery12" href="images/category/9.png">
+                <div class="category__zoom">
+                  <svg class="category__zoom-icon">
+                    <use xlink:href="images/stack/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </a>
+              <div class="category__bottom-box">
+
+
+                <div class="category__bottom-box__item">
+                  <p class="product__presence">в наличии</p>
+                  <span class="product__star-num">4.5</span>
+                  <span class="product__star"></span>
+                </div>
+
+
+                <h3 class="category__items-title">
+                  Ананас, 1кг
+                </h3>
+                <div class="category__bottom">
+
+                  <ul class="category__box">
+                    <li class="category__price category__price--old">1999 ₽</li>
+                    <li class="category__price category__price--new">999 ₽</li>
+                  </ul>
+                  <div class="counter">
+                    <button class="counter__minus counter__btn" data-action="minus"></button>
+                    <span class="counter__num" data-counter>1</span>
+                    <button class="counter__plus counter__btn" data-action="plus"></button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="category__cart" type="button" data-cart>
+                <span class="sr-only">Корзина</span>
+              </button>
+
+            </article>
+
+          </li>
+         
+
+        </ul>
+
+        <div class="catalog-page__box-inner">
+          <a class="catalog-page__link" href="#">Показать еще</a>
+
+          <ul class="pagination">
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                <svg class="pagination__icon pagination__icon--active">
+                  <use xlink:href="images/stack/sprite.svg#arrow-left">
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="pagination__item pagination__item--active">
+              <a class="pagination__link" href="#">
+                1
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                2
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                ...
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                9
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                10
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                <svg class="pagination__icon">
+                  <use xlink:href="images/stack/sprite.svg#arrow-right">
+                  </use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

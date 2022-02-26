@@ -1,0 +1,86 @@
+.catalog-filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 48px;
+ 
+  &__form {
+    margin-right: 15px;
+  }
+
+  &__sort-item {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--num {
+      width: 100px;
+    }
+  }
+
+  &__option {
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    background-image: url('../images/icons/icon-chevron-option.svg');
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    right: 15px;
+    top: 21px;
+  }
+
+  .jq-selectbox__select {
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #333;
+    text-shadow: none;
+    box-shadow: none;
+    @extend %open-sans-400;
+
+  }
+
+  .jq-selectbox__select-text {
+    padding: 15px 40px 15px 15px;
+    letter-spacing: 1px;
+  }
+
+
+  .jq-selectbox.focused .jq-selectbox__select {
+    border: 1px solid $silver-600;
+  }
+
+  .jq-selectbox__dropdown {
+    width: 100%;
+    border: 1px solid $silver-600;
+    padding: 10px;
+    top: 50px;
+    background-color: #ffffff;
+  }
+
+  &__btn {
+    padding: 6px;
+    background-color: $bg;
+  }
+
+  &__icon {
+    fill: $silver-600;
+    width: 35px;
+    height: 35px;
+
+    &--active {
+      fill: $bg-accent;
+    }
+  }
+}

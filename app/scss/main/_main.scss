@@ -4,6 +4,16 @@
 @import 'stock.scss';
 @import 'news.scss';
 @import 'news.scss';
-@import '../components/partners.scss';
-@import '../components/header-menu.scss';
+@import './components/partners.scss';
+@import './components/header-menu.scss';
+@import './components/filters.scss';
+@import 'catalog-page/catalog-page.scss';
+@import './components/catalog/catalog-product.scss';
+@import './components/catalog/catalog-filter.scss';
+@import 'product-page/product-page.scss';
+@import './components/product/product-slide.scss';
+@import './components/product/product-content.scss';
+@import './components/product/product-top.scss';
+@import './components/product/product-description.scss';
+@import './components/product/product-reviews.scss';
 

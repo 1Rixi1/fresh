@@ -9,7 +9,7 @@
   <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <title>FreshOk | Home</title>
+  <title>FreshOk | Catalog</title>
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
@@ -26,16 +26,17 @@
 
   @include('page/header.html')
 
+  @include('page/breadcrumbs/product-breadcrumbs.html')
   <main class="main">
-    <h1 class="sr-only">Общая информация о товарах</h1>
-    @include('main/slider.html')
-    @include('main/info.html')
-    @include('main/category.html')
-    @include('main/stock.html')
-    @include('main/partners.html')
-    @include('main/news.html')
+    <h1 class="sr-only">Общая информация о продукте</h1>
+
+    @include('main/product-page/product-page.html')
+
+    
+
 
   </main>
+  @include('main/info.html')
 
   @include('page/footer.html')
 

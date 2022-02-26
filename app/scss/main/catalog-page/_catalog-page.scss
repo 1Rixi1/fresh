@@ -1,0 +1,31 @@
+.catalog-page {
+  padding: 48px 0 72px;
+  &__title {
+    @extend %ruda-700;
+    font-size: 42px;
+    line-height: 1.2;
+    color: $dark-900;
+    margin-bottom: 48px;
+    letter-spacing: 1.5px;
+  }
+  &__inner{
+    display: flex;
+  }
+
+  &__box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__box-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link{
+    @extend %button;
+    letter-spacing: 1.3px;
+  }
+}

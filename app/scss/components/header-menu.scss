@@ -430,6 +430,7 @@
 
   &--active {
     transform: translateY(0);
+    z-index: 15;
   }
 
   &__inner {
@@ -600,5 +601,6 @@
 
   &--active {
     transform: translateY(0);
+    z-index: 12;
   }
 }

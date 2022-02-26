@@ -1,0 +1,97 @@
+.product-slide {
+  max-width: 630px;
+  height: 600px;
+  width: 100%;
+  margin-right: 30px;
+  border: 1px solid $silver-600;
+  border-radius: 4px;
+  position: relative;
+
+  &__slide {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+  }
+
+
+  &__nav {
+    position: absolute;
+    width: 18px;
+    height: 32px;
+    height: 60px;
+    width: 60px;
+  
+
+  &::after {
+    color: $default;
+  }
+}
+
+.swiper-button-prev {
+  left: 22px;
+}
+
+.swiper-button-next {
+  right: 22px;
+}
+
+}
+
+.product-popup {
+  display: none;
+  width: 1728px;
+  height: 950px;
+  position: relative;
+
+  &__slide {
+    height: 860px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    object-fit: cover;
+    position: absolute;
+  }
+
+
+  .swiper-button-prev {
+    left: 80px;
+  }
+
+  .swiper-button-next {
+    right: 80px;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border: 1px solid $silver-600;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $bg-accent;
+    border: 1px solid $bg-accent;
+  }
+
+
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  padding: 0;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.fancybox-button svg {
+  top: 28px;
+  right: 28px;
+}

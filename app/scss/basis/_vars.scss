@@ -46,7 +46,6 @@ $green-100: #eff6e7;
 }
 
 %button {
-  letter-spacing: 0.03em;
   color: #ffffff;
   font-size: 18px;
   line-height: 1.3;
@@ -63,4 +62,13 @@ $green-100: #eff6e7;
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+%checkbox-hidden,
+%radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
